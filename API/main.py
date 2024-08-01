@@ -13,9 +13,9 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS
 
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate(r'private_key/foodrescue_key.json')
+cred = credentials.Certificate(r'foodrescue_key.json')
 firebase_admin.initialize_app(cred)
-gcp_cred = r'private_key/app_inventor.json'
+gcp_cred = r'app_inventor.json'
 
 # Initialize Google Cloud Storage client
 gcp_client = storage.Client.from_service_account_json(gcp_cred)
